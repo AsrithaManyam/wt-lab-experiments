@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <script>
+          function f2()
+          {
+            var div1=document.getElementById("p");
+            div1.style.color="purple";
+            div1.style.textAlign="center"
+        }
+        function f1(){
+         var k=document.getElementById("t");
+         t.style.color="darkgreen";
+         t.innerHTML="tagarapuvalasa,vizag";
+        }
+        function f3(){
+            document.getElementById("image").setAttribute("src","flower.jpeg");
+        }
+        function f4(){
+            let f=document.getElementById("bu");
+            f.style.color="pink";
+            f.style.backgroundColor="blue";
+        }
+        function f5(){
+            const r=document.getElementById("d");
+            r.style.backgroundColor="orange";
+            r.style.fontSize="20px";
+            r.style.color="blue";
+        }
+        const element = document.getElementById("submit");
+        element.addEventListener("click", function() {
+         <p>hii</p>
+         alert("your data is saved");
+});
+        function option(){
+            k=document.getElementById("hi").value
+            if (k=="he")
+            {
+             let t1=document.createElement("input");
+            t1.setAttribute("type","text");
+            document.body.appendChild(t1);
+            }
+            else{
+                let t1=document.createElement("input");
+            t1.setAttribute("type","radio");
+            document.body.appendChild(t1);
+            }
+        }
+        </script>
+    </head>
+    <body bgcolor="lightgrey">
+        <button type="button" id="submit">Submit</button>
+        <h2 id="p" onclick="f2()">Anits college</h2>
+        <p id="t" onmouseover="f1()"><b>Sangivalasa</b></p>
+        <div id="d" onmousemove="f5()">
+            hello!!good Morning
+        </div>
+        <div>
+        <img src="nature.jpg" id="image" ondblclick="f3()">
+        </div>
+        <br>
+        <input type="button" id="bu"  value="click here" onmouseout="f4()">
+        <!--<button id="submit">Submit</button>-->
+        <select id="hi" onchange="option()">
+            <option value="h">textbox</option>
+            <option value="he">radiobox</option>
+        </select>
+
+        </body>
+</html>

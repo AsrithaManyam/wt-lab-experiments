@@ -1,0 +1,26 @@
+body
+{
+color:blue;
+background-color: aquamarine;
+align: center;
+}
+label{
+    color:blueviolet;
+    text-align:center;
+    padding-left:200px; 
+}
+::placeholder{
+    color:brown;
+    padding-top: 2px;
+}
+input,select,textarea{
+    border-radius: 7;
+    border-width: 25%;
+    border-color:rosybrown;
+    background-color: antiquewhite;
+}
+table{
+    align: center;
+    padding:10px;
+    spacing:20px;
+}

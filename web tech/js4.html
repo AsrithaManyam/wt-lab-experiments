@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script>
+          function f2()
+          {
+            var div1=document.getElementById("p");
+            div1.style.color="purple";
+            div1.style.textAlign="center"
+        }
+        function f1(){
+         var k=document.getElementById("t");
+         t.style.color="darkgreen";
+         t.innerHTML="tagarapuvalasa,vizag";
+        }
+        function f3(){
+            document.getElementById("image").setAttribute("src","flower.jpeg");
+        }
+        function f4(){
+            let f=document.getElementById("bu");
+            f.style.color="pink";
+            f.style.backgroundColor="blue";
+        }
+        function f5(){
+            const r=document.getElementById("d");
+            r.style.backgroundColor="orange";
+            r.style.fontSize="20px";
+            r.style.color="blue";
+        }
+        var doc1=document.querySelector("do");
+        doc1.addEventListener("click",function(){
+            doc1.style.backgroundColor="yellow";
+        });
+        function option(){
+            k=document.getElementById("hi").value;
+            let t1=document.createElement("input");
+            if (k=="textbox")
+            {
+            t1.setAttribute("type","text");
+            t1.setAttribute("value","textbox is created");
+            document.body.appendChild(t1);    
+        }
+            else if(k=="radiobutton"){
+            t1.setAttribute("type","radio");
+            }
+            else if(k=="checkbox")
+            {
+            t1.setAttribute("type","checkbox");
+            }
+            else if (k=="button"){
+                t1.setAttribute("type","button");
+                t1.style.width="30px";
+            }
+            document.body.appendChild(t1);
+
+        }
+        function f6(){
+        var q=document.getElementById("ic").value;
+        document.body.style.backgroundColor=q;
+        }
+        function f7(){
+            
+        }
+        </script>
+    </head>
+    <body>
+        <div align="right"><input type="color" id="ic" onclick="f6()"></div>
+        <h2 id="p" onclick="f2()">Anits college</h2>
+        <p id="t" onmouseover="f1()"><b>Sangivalasa</b></p>
+        <div id="d" onmousemove="f5()">
+            hello!!good Morning
+        </div>
+        <div>
+        <img src="nature.jpg" id="image" ondblclick="f3()">
+        </div>
+        <br>
+        <input type="button" id="do"  value="click here" onmouseout="f4()"></button>
+        <button id="bu">Submit</button>
+        <select id="hi" onchange="option()">
+            <option value="textbox">textbox</option>
+            <option value="radiobutton">radiobutton</option>
+            <option value="checkbox">checkbox</option>
+            <option value="button">button</option>
+        </select>
+        </body>
+</html>

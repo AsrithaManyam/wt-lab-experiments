@@ -1,0 +1,24 @@
+<html>
+    <body>
+    <h1 id="hi" onclick="f1()">HI</h1>
+    <select>
+        <option id="t" onchange="f1()" type="text">textbox</option>
+        <option id="b">button</option>
+    </select>
+    <script>
+         var k=document.getElementById("t")
+         k.addEventListener("onchange",
+         function f1(){
+         const input = document.createElement("input");
+    input.setAttribute("type", "text");
+    document.body.appendChild(input);
+         });
+        k.style.color="pink";
+        k.style.border=" solid red 10px"
+        document.getElementById("hi").innerHTML="hello"
+        k=document.getElementById("hi")
+        k.style.color="pink";
+    </script>
+
+    </body>
+</html>

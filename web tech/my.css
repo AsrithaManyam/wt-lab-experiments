@@ -1,0 +1,17 @@
+h1{
+    color:black;
+}
+body{
+    color:aquamarine;
+}
+table{
+    color:blanchedalmond;
+    background-color: blue;
+    border-spacing: 5px;
+    border:2px solid black;
+}
+input[type=radio]{
+    border-color: aquamarine;
+    color:blueviolet;
+
+}

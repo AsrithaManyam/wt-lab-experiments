@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: bisque;
+                text-align: center;
+            }
+        </style>
+        <script>
+            function fun1(obj){
+                this.setAttribute("height",300);
+                this.setAttribute("width",400);
+            }
+            function fun2(obj){
+                this.setAttribute("height","200px");
+                this.setAttribute("width","100px");
+            }
+        </script>
+    </head>
+    <body>
+        <p id="p1">Hello Everyone</p>
+        <p id="p2">Javascript</p>
+        <p id="p3">Hi Javascript</p>
+        <p id="p4">Anits</p>
+        <button type="button" onclick='document.getElementById("p1").innerHTML="Hi Everyone!"'>Change</button>     
+        <button type="button" onclick='document.getElementById("p2").style.color="red"'>Color</button>       
+        <button type="button" onclick='document.getElementById("p3").style.fontSize="50px"'>Size</button> 
+        <button type="button" onclick='document.getElementById("p4").style.fontFamily="Times Now Roman"'>Font</button> <br>
+        <script>
+            let a=5
+            let b=10
+            document.write("sum is " + (a+b));
+            document.write("<br>");
+            s="Anits College"
+            document.write("\nString is " + s);
+            document.write(`\nString is ${s}`);
+        </script>
+        <h3 onclick="this.innerHTML='You Clicked me'">Click Here!</h3>
+        <div align=center style="background-color:lightblue;height:20px;width:150px;" onclick="this.innerHTML='Single click'" ondblclick="'Double Click'">Single/Double</div>
+        <div style="background-color: chocolate;height:20px;width:150px;" onmousedown="this.innerHTML='Pressing me'" onmouseup="this.innerHTML='Released me'">Up/down</div>
+        <img src="img1.jpg" height="200px" width="200px" onmouseover="func1(this)" onmouseout="fun2(this)">
+        <input type="color">
+        
+        <label for="Creating objects">Create objects:</label>
+        <select name="obj">
+            <option value="textbox" id="txt">TextBox</option>
+            <option value="radio" id="radio">RadioButton</option>
+            <option value="checkbox" id="check">CheckBox</option>
+        </select>
+        <button type="button" onclick="Create()">Create Object</button>
+        <script>
+            function Create(){
+                let t=document.createElement("input");
+                if(document.getElementById('txt').innerHTML=="TextBox"){
+                t.setAttribute("type","textbox");}
+                else if(document.getElementById('radio').innerHTML=="RadioButton"){
+                t.setAttribute("type","radio");}
+                else{
+                t.setAttribute("type","checkbox");}
+                document.body.appendChild(t);
+            }
+        </script>
+    </body>
+</html>

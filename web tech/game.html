@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <style>
+            #player{
+                position: absolute;
+                top:0px;
+                left: 0px;
+                width:30px;
+                height:30px;
+                background-color:red;
+             }
+             #score{
+                position:absolute;
+                top:10px;
+                right:10px;
+                font-size:20px;
+             }
+             #co-ord{
+                position:absolute;
+                right:600px;
+                top:10px;
+             }          
+        </style>
+    </head>
+    <body>
+        <div id="player"></div>
+        <div id="score"></div>
+        <div id="co-ord"></div> 
+    <script>
+        var p=document.getElementById("player");
+        var s=document.getElementById("score");
+        var c=document.getElementById("co-ord");
+        var score=0;
+        var position={x:0,y:0};
+     
+      document.addEventListener("keydown",function(event){
+        document.body.style.backgroundColor="pink";
+        if (event.key=="ArrowDown")
+        {
+            position.y+=10;
+        }
+        else if (event.key=="ArrowUp")
+        {
+            position.y-=10;
+        }
+        else if (event.key=="ArrowLeft")
+        {
+            position.x-=10;
+        }
+        else if (event.key=="ArrowRight")
+        {
+            position.x+=10;
+        }
+        p.style.top=position.y+"px";
+        p.style.left=position.x+"px";
+        c.innerHTML="co-ord: "+position.x+","+position.y;
+        if (position.x===250 && position.y===250)
+        {
+            score+=10;
+            s.innerHTML="score: "+score;
+
+        }    
+      });
+    </script>
+    </body>
+</html>
